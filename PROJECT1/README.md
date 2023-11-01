@@ -18,3 +18,5 @@ Upadte a list of packages in package manager
 `sudo apt ugrade`
 
 ![Alt text](images/sudo.png)
+
+# Command cd ~ is used to change directory on linux terminal
