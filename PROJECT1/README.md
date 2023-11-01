@@ -12,6 +12,7 @@
 
 sudo: Shot for superuser do, this is used to perform tasks that requires administartive or root priviledgies 
 Upadte a list of packages in package manager
+
 `sudo apt ugrade`
 
 ![Alt text](images/sudo.png)
