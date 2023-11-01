@@ -19,4 +19,7 @@ Upadte a list of packages in package manager
 
 ![Alt text](images/sudo.png)
 
-# Command cd ~ is used to change directory on linux terminal
+#   pwd command"
+The "pwd" command prints the full name (the full path) of current/working directory.
+    ![Alt text](images/pwd.png)
+
