@@ -39,6 +39,7 @@ To do so, enter the following command:
 ![Alt text](images/cd_2_sub_with_fullpath.png)
 
 
-##NB:##
+## NB:
+
 Running `cd` *command* in the subdirectory without an option will take you to the home folder. Keep in mind that only users with sudo privileges can execute it.
 Let's say you're in /home/ubuntu and want to go to a new subdirectory of ubuntu. 
