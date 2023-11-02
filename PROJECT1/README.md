@@ -65,3 +65,10 @@ ls is a Linux shell command that lists directory contents of files and directori
 ### Syntax of `ls` command in Linux 
 
 #### ls [option] [file/directory]
+
+|Options    | Description
+|------------------------------------------------------------------------------------------------------------
+|   -i        | known as a long format that displays detailed information about files and directories.
+|   -a        |
+|
+|
