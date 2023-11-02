@@ -19,17 +19,17 @@ Upadte a list of packages in package manager
 
 ![Alt text](images/sudo.png)
 
-#   pwd command
+## 2.  pwd command
 
 The "pwd" command prints the full name (the full path) of current/working directory.
 
-`run`
+To do this, enter the following command.
 
 `pwd`
 
 ![Alt text](images/pwd.png)
 
-# cd command
+## 3. cd command
 To navigate through the Linux files and directories, use the **cd** command with option for either subdirectory or parent directory. Depending on your current working directory, it requires either the full path, and  
 presently I'm in `/home/ibukun`. Therefore to navigate to subdirectory of ibukun *secondFolder* with fullpath.
 To do so, enter the following command:
@@ -46,11 +46,16 @@ To do so, enter the following command:
 
 ![Alt text](images/cd_wtout_option.png)
 
-Here are some shotcuts to you navigate
+Here are some shotcuts to you navigate.
 To move up directory, enter the below command
 
 `cd ..`
 
 ![Alt text](images/cd_up_directory.png)
 
-`cd ..`
+To move to the previous directory, enter the below command
+
+`cd ~`
+
+![Alt text](images/cd_2_previous_directory.png)
+
