@@ -45,3 +45,12 @@ To do so, enter the following command:
 `cd`
 
 ![Alt text](images/cd_wtout_option.png)
+
+Here are some shotcuts to you navigate
+To move up directory, enter the below command
+
+`cd ..`
+
+![Alt text](images/cd_up_directory.png)
+
+`cd ..`
