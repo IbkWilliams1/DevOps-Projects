@@ -55,7 +55,7 @@ To move up directory, enter the below command
 
 To move to the previous directory, enter the below command
 
-`cd ~`
+`cd -`
 
 ![Alt text](images/cd_2_previous_directory.png)
 
