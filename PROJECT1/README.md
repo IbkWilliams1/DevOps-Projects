@@ -19,7 +19,10 @@ Upadte a list of packages in package manager
 
 ![Alt text](images/sudo.png)
 
-#   pwd command"
+#   pwd command
+
 The "pwd" command prints the full name (the full path) of current/working directory.
-    ![Alt text](images/pwd.png)
+
+
+![Alt text](images/pwd.png)
 
