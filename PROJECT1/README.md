@@ -30,8 +30,8 @@ The "pwd" command prints the full name (the full path) of current/working direct
 ![Alt text](images/pwd.png)
 
 # cd command
-To navigate through the Linux files and directories, use the **cd** command. Depending on your current working directory, it requires either the full path 
-Currently I'm in `/home/ibukun` . Therefore to navigate to subdirectory of ibukun *secondFolder* with fullpath.
+To navigate through the Linux files and directories, use the **cd** command with option for either subdirectory or parent directory. Depending on your current working directory, it requires either the full path, and  
+presently I'm in `/home/ibukun`. Therefore to navigate to subdirectory of ibukun *secondFolder* with fullpath.
 To do so, enter the following command:
 
 `cd Desktop/First_folder/secondFolder`
@@ -39,7 +39,9 @@ To do so, enter the following command:
 ![Alt text](images/cd_2_sub_with_fullpath.png)
 
 
-## NB:
+NB: Running `cd` *command* in the subdirectory without an option will take you to the home folder. Keep in mind that only users with sudo privileges can execute it.
+As you are currently in **/home/ibukun/Desktop/First_folder/secondFolder**
+To do so, enter the following command:
+`cd`
 
-Running `cd` *command* in the subdirectory without an option will take you to the home folder. Keep in mind that only users with sudo privileges can execute it.
-Let's say you're in /home/ubuntu and want to go to a new subdirectory of ubuntu. 
+![Alt text](images/cd_wtout_option.png)
