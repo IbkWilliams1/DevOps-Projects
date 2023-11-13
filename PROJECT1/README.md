@@ -59,14 +59,14 @@ To move to the previous directory, enter the below command
 
 ![Alt text](images/cd_2_previous_directory.png)
 
-## 4.  ls Command
+## 4.  ls `Command`
 
 ls is a Linux shell command that lists directory contents of files and directories.  It provides valuable information about files, directories, and their attributes.
 ### Syntax of `ls` command in Linux 
 
 #### ls [option] [file/directory]
+`ls -R` 
 
-|Options   | Description
-|-----------------------------------------------------------------------------------------------------
-|   -i     | known as a long format that displays detailed information about files and directories.
-|   -a     |
+`ls -a`
+
+`ls -lh`
