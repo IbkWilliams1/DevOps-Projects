@@ -89,8 +89,11 @@ To create a file called “report.txt”, enter:
 
 Type the following text:
 
-``This is a test.``
-``in the report.txt.``
-``<control-D>``
+``This is a test in the report.txt.``
+
+You need to press [CTRL] + [D] i.e. hold the control key down, then tap d.
+
+![Alt text](images/cat_create_file_wt_text.png)
+
 
 
