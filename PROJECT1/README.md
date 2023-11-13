@@ -68,7 +68,7 @@ ls is a Linux shell command that lists directory contents of files and directori
 
 Description
 
-`ls -R`     | This command lists directory contents recursively, showing the files and subdirectories of the specified directory and its subdirectories
+`ls -R`     
 
 `ls -a`
 
