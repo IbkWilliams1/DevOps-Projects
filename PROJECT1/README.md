@@ -68,8 +68,10 @@ ls is a Linux shell command that lists directory contents of files and directori
 
 Description
 
-`ls -R`     
+`ls -R`   
 
 `ls -a`
 
 `ls -lh`
+
+![Alt text](<images/ls with options.png>)
