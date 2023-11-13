@@ -95,5 +95,6 @@ You need to press [CTRL] + [D] i.e. hold the control key down, then tap d.
 
 ![Alt text](images/cat_create_file_wt_text.png)
 
+### - To Combine Two Or More Files Using cat Command
 
 
