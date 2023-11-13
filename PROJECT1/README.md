@@ -75,3 +75,22 @@ Description
 `ls -lh`
 
 ![Alt text](<images/ls with options.png>)
+
+## 5.  cat Command
+Cat command is used to display the content of files
+
+### - Display a FIle content with cat command
+![Alt text](images/cat_4_view_file.png)
+
+### - Create a File with cat command
+To create a file called “report.txt”, enter:
+
+`cat >report.txt`
+
+Type the following text:
+
+``This is a test.``
+``in the report.txt.``
+``<control-D>``
+
+
