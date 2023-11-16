@@ -115,7 +115,4 @@ For examples
 
 `cp -r sourcedirectory destination`
 
-
-
-
-
+![Alt text](images/cp_directory_2_another_destination.png)
