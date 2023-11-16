@@ -116,3 +116,10 @@ For examples
 `cp -r sourcedirectory destination`
 
 ![Alt text](images/cp_directory_2_another_destination.png)
+
+## 7. mv command
+The primary use of mv command is to move and reanme files and directories. Additionally, it doesn't produce an output upon execution.
+For example
+`mv sqlite.sh /home/username/Documents directory`
+
+![Alt text](images/mv_move.png)
