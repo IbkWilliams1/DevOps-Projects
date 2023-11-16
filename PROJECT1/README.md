@@ -118,9 +118,15 @@ For examples
 ![Alt text](images/cp_directory_2_another_destination.png)
 
 ## 7. mv command
-The primary use of mv command is to move and reanme files and directories. Additionally, it doesn't produce an output upon execution.
+The primary use of mv command is to move and rename files and directories. Additionally, it doesn't produce an output upon execution.
 For example
-
+mv command for moving file
 `mv sqlite.sh /home/username/Documents directory`
 
 ![Alt text](images/mv_move.png)
+
+mv for renaming file
+change directory to the Documents, list the content of the directory with ls command and then rename 
+myscript.sh to darey_script.sh with the bellow command
+
+`mv myscript.sh darey_script.sh`
