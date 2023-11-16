@@ -100,5 +100,15 @@ Another way to use "cat" command
 ### - To Combine Two Or More Files and store the output in another file
 ![Alt text](images/cat_2_combine_files.png)
 
+## 6. cp Command
+cp command in linux is used to coppy files or directories
+For examples 
+`cp sourcefile destination`
+
+![Alt text](images/cp_2_another_destination.png)
+
+`cp filename1.txt filename2.txt filename3.txt /home/username/Documents`
+
+
 
 
