@@ -130,3 +130,5 @@ change directory to the Documents, list the content of the directory with ls com
 myscript.sh to darey_script.sh with the bellow command
 
 `mv myscript.sh darey_script.sh`
+
+![Alt text](images/mv_rename.png)
