@@ -103,6 +103,7 @@ Another way to use "cat" command
 ## 6. cp Command
 cp command in linux is used to coppy files or directories
 For examples 
+
 `cp sourcefile destination`
 
 `cp filename1.txt filename2.txt filename3.txt /home/username/Documents`
