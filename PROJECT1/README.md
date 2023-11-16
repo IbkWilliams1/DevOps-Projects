@@ -110,6 +110,10 @@ For examples
 
 ![Alt text](images/cp_2_another_destination.png)
 
+If copying a directory, you can use "-r" option
+For examples 
+
+`cp -r sourcedirectory destination`
 
 
 
