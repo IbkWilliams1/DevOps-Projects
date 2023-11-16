@@ -105,9 +105,11 @@ cp command in linux is used to coppy files or directories
 For examples 
 `cp sourcefile destination`
 
+`cp filename1.txt filename2.txt filename3.txt /home/username/Documents`
+
 ![Alt text](images/cp_2_another_destination.png)
 
-`cp filename1.txt filename2.txt filename3.txt /home/username/Documents`
+
 
 
 
