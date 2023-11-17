@@ -162,3 +162,14 @@ myscript.sh to darey_script.sh with the bellow command
 `rm -r TeraBox/songs`
 
 ![Alt text](images/rm_delete_dir.png)
+
+## 10. Touch command
+
+This is use to create file or files by separating the files with a space
+First list the content of TeraBox and it return nothing. Then **cd into TeraBox**
+Type the following command
+`touch file1.txt file2.txt`
+
+ls the content to show what is inside
+
+![Alt text](images/touch_2_create_file.png)
