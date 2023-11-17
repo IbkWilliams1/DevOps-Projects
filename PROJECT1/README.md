@@ -147,4 +147,4 @@ myscript.sh to darey_script.sh with the bellow command
 
 `mkdir TeraBox/song`
 
-![Alt text](images/cp_directory_2_another_destination.png)
+![Alt text](images/mkdir_new_dir_in2_dir.png)
