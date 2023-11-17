@@ -181,3 +181,4 @@ The locate command can find a file in the database system
 To use locate command, first install 
 
 ![Alt text](images/locate_install.png)
+![Alt text](images/locate.png)
