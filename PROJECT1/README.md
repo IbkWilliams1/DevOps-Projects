@@ -127,7 +127,7 @@ For example.
 
 ![Alt text](images/mv_move.png)
 
--   mv for renaming file
+-   mv command for renaming file
 
 change directory "cd" to the Documents, list the content of the directory with ls command and then rename 
 myscript.sh to darey_script.sh with the bellow command
@@ -135,3 +135,13 @@ myscript.sh to darey_script.sh with the bellow command
 `mv myscript.sh darey_script.sh`
 
 ![Alt text](images/mv_rename.png)
+
+##  8. mkdir command
+-   To make a directory TeraBox, use this command
+
+`mkdir TeraBox`
+
+![Alt text](images/mkdir_2_directory.png)
+
+-   To make a new directory "sonds" inside TeraBox, cd into TeraBox and then type this command
+`mkdir TeraBox/`
