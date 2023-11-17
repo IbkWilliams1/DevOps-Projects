@@ -143,8 +143,22 @@ myscript.sh to darey_script.sh with the bellow command
 
 ![Alt text](images/mkdir_2_directory.png)
 
--   To make a new directory "songs" inside TeraBox, cd into TeraBox and then type this command
+-   To make a new directory "songs" inside TeraBox, type this command
 
 `mkdir TeraBox/song`
 
 ![Alt text](images/mkdir_new_dir_in2_dir.png)
+
+## 9. rmdir Command
+
+-   This command is used to permanently delete an empty directory.
+
+`rmdir songs/`
+
+![Alt text](images/rmdir_empty.png)
+
+-   To delete directory that has content, cd to the super-directory or parent directory, then type the following command
+
+`rm -r TeraBox/songs`
+
+![Alt text](images/rm_delete_dir.png)
