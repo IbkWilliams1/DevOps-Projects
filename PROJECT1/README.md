@@ -143,5 +143,8 @@ myscript.sh to darey_script.sh with the bellow command
 
 ![Alt text](images/mkdir_2_directory.png)
 
--   To make a new directory "sonds" inside TeraBox, cd into TeraBox and then type this command
-`mkdir TeraBox/`
+-   To make a new directory "songs" inside TeraBox, cd into TeraBox and then type this command
+
+`mkdir TeraBox/song`
+
+![Alt text](images/cp_directory_2_another_destination.png)
