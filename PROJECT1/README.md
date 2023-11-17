@@ -168,8 +168,16 @@ myscript.sh to darey_script.sh with the bellow command
 This is use to create file or files by separating the files with a space
 First list the content of TeraBox and it return nothing. Then **cd into TeraBox**
 Type the following command
+
 `touch file1.txt file2.txt`
 
 ls the content to show what is inside
 
 ![Alt text](images/touch_2_create_file.png)
+
+## 11. locate command
+
+The locate command can find a file in the database system
+To use locate command, first install 
+
+![Alt text](images/locate_install.png)
