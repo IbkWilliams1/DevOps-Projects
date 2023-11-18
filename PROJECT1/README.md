@@ -202,3 +202,10 @@ Run the command below
 ![output](images/grep.png)
 
 As you can see, grep has not only searched and matched the string “Warrior” but has also printed the lines in which the string appears.
+
+## 14.  df Command:
+The syntax below is use to check the current directory's system disk space usage in a human-readable format
+`df -h`
+
+`df [options] [file]`
+![Alt text](images/df.png)
