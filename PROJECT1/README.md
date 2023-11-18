@@ -182,3 +182,21 @@ To use locate command, first install
 
 ![Alt text](images/locate_install.png)
 ![Alt text](images/locate.png)
+
+## 12. find command
+The find command to search for files within a specific directory and perform subsequent operations.
+
+Use the following command
+
+`find /home -name file1.txt`
+
+![Alt text](images/find.png)
+
+## 13. Grep COmmand
+
+Grep can be use to find or search a regular expression or string in a text file. This is demonstrated below.
+Run the command below
+
+`grep Warrior project.sh`
+
+![Alt text](images/grep.png)
