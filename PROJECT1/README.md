@@ -205,7 +205,9 @@ As you can see, grep has not only searched and matched the string “Warrior” 
 
 ## 14.  df Command:
 The syntax below is use to check the current directory's system disk space usage in a human-readable format
+
 `df -h`
 
 `df [options] [file]`
+
 ![Alt text](images/df.png)
