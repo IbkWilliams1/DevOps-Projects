@@ -199,4 +199,6 @@ Run the command below
 
 `grep Warrior project.sh`
 
-![Alt text](images/grep.png)
+![output](images/grep.png)
+
+As you can see, grep has not only searched and matched the string “Warrior” but has also printed the lines in which the string appears.
