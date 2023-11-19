@@ -211,3 +211,8 @@ The syntax below is use to check the current directory's system disk space usage
 `df [options] [file]`
 
 ![Alt text](images/df.png)
+##  15. du command:
+Du command run  to identify which part of system uses the storage excessively.
+Adding a flag to the du command will modify the operation such as below.
+
+![Alt text](images/du_with_options.png)
