@@ -277,5 +277,10 @@ diff stands for difference. This command is used to display the differences in t
 
 *diff [options] File1 File2*
 
+Applying diff command without any option we get the following output: 
+
 ![Alt text](images/diff.png)
+
+Applying diff command with -c option we get the following output: 
+
 ![Alt text](<images/diff -c.png>)
