@@ -246,8 +246,22 @@ to output piped data to the CLI.
 
 ![Alt text](images/some_command_piped_2_head.png)
 
-This will take the output of *cat history.txt* and display only the first five lines of that output. You can also specify the number of lines you want to display with the -n option, like this:
+This will take the output of *cat history.txt* and display only the first five lines of that output specifying the number of lines you want to display with the -n option, like this:
 
 `cat history.txt | head -n 5`
 
 ![Alt text](images/head_view_n_line.png)
+
+##  17. tail Command
+
+This command is like a reverse of *head command* . It allows you to view the last 10 lines in a text.
+Adding an option lets you change the number of lines shown. 
+Here's the general syntax:
+
+*tail [option] [file]*
+
+`tail history.txt`
+
+![Alt text](images/tail_view.png)
+
+This will take the output of *cat history.txt* and display only the last two lines of that output specifying the number of lines you want to display with the -n option, like this:
