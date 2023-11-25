@@ -277,10 +277,28 @@ diff stands for difference. This command is used to display the differences in t
 
 *diff [options] File1 File2*
 
+`OPTION`
+Linux system offers two different ways to view the diff command output i.e. context mode and unified mode. 
+
 Applying diff command without any option we get the following output: 
 
 ![Alt text](images/diff.png)
 
+
 Applying diff command with -c option we get the following output: 
 
+-   *context mode*
+
 ![Alt text](<images/diff -c.png>)
+
+-   *unified mode.*
+
+ It is similar to context mode but it doesn’t display any redundant information or it shows the information in concise form. 
+
+Applying diff command with -u option we get the following output: 
+
+![Alt text](<images/diff -u.png>)
+
+The first file **history.txt** is indicated by —, and the second file **project.sh** is indicated by +++. 
+The first two lines of this output show us information about **history.txt** and **project.sh**. It lists the file name, modification date, and modification time of each of our files, one per line. 
+After that the next line has two at sign @ followed by a line range from the first file (in our case lines 1 through 4, separated by a comma) prefixed by – and then space and then again followed by a line range from the second file prefixed by + and at the end two at sign @. Followed by the file content in output tells us which line remain unchanged and which lines needs to added or deleted(indicated by symbols) in the file 1 to make it identical to file 2. 
