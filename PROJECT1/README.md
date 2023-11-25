@@ -271,3 +271,10 @@ This will take the output of *cat history.txt* and display only the last two lin
 
 ![Alt text](images/tail_view_n_line.png)
 
+##  18. diff Command
+
+diff stands for difference. This command is used to display the differences in the files by comparing the files line by line
+
+*diff [options] File1 File2*
+
+![Alt text](images/diff.png)
