@@ -216,3 +216,23 @@ Du command run  to identify which part of system uses the storage excessively.
 Adding a flag to the du command will modify the operation such as below.
 
 ![Alt text](images/du_with_options.png)
+
+##  16. Head Command
+
+This command allows you to view the first 10 lines in a text.
+Adding an option lets you change the number of lines shown. 
+Here's the general syntax:
+
+*head [option] [file]*
+For instance, you want to view the first ten lines of history.txt, located in the /home/ibukun
+
+`cat history.txt`
+
+![Alt text](images/history_view.png)
+
+`head history.txt`
+
+![Alt text](images/history_head.png)
+
+The head command is also used
+to output piped data to the CLI.
