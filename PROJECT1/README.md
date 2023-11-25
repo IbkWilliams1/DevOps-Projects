@@ -265,3 +265,9 @@ Here's the general syntax:
 ![Alt text](images/tail_view.png)
 
 This will take the output of *cat history.txt* and display only the last two lines of that output specifying the number of lines you want to display with the -n option, like this:
+
+
+`cat history.txt | tail -n 2`
+
+![Alt text](images/tail_view_n_line.png)
+
