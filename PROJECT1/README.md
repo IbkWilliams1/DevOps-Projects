@@ -224,11 +224,16 @@ Adding an option lets you change the number of lines shown.
 Here's the general syntax:
 
 *head [option] [file]*
-For instance, you want to view the first ten lines of history.txt, located in the /home/ibukun
 
+For instance, you want to view the first ten lines of history.txt, located in the /home/ibukun
+To know the full content of history file
+
+RUN this command
 `cat history.txt`
 
 ![Alt text](images/history_view.png)
+
+Then type this command to see the first ten lines
 
 `head history.txt`
 
