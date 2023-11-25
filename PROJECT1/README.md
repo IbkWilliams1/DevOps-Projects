@@ -241,3 +241,13 @@ Then type this command to see the first ten lines
 
 The head command is also used
 to output piped data to the CLI.
+
+`cat historty.txt | head`
+
+![Alt text](images/some_command_piped_2_head.png)
+
+This will take the output of *cat history.txt* and display only the first five lines of that output. You can also specify the number of lines you want to display with the -n option, like this:
+
+`cat history.txt | head -n 5`
+
+![Alt text](images/head_view_n_line.png)
