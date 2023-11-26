@@ -100,13 +100,13 @@ Another way to use "cat" command
 ### - To Combine Two Or More Files and store the output in another file
 ![Alt text](images/cat_2_combine_files.png)
 
-## 6. cp Command
+## 6. CP Command
 cp command in linux is used to coppy files or directories
 For examples 
 
-`cp sourcefile destination`
+`cp [sourcefile] [destination]`
 
-`cp filename1.txt filename2.txt filename3.txt /home/username/Documents`
+`cp [filename1.txt filename2.txt filename3.txt] [/home/username/Documents]`
 
 ![Alt text](images/cp_2_another_destination.png)
 
@@ -145,7 +145,7 @@ myscript.sh to darey_script.sh with the bellow command
 
 -   To make a new directory "songs" inside TeraBox, type this command
 
-`mkdir TeraBox/song`
+```mkdir TeraBox/song```
 
 ![Alt text](images/mkdir_new_dir_in2_dir.png)
 
