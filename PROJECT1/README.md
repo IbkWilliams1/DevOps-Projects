@@ -147,6 +147,7 @@ myscript.sh to darey_script.sh with the bellow command
 
 ```mkdir TeraBox/song```
 
+
 ![Alt text](images/mkdir_new_dir_in2_dir.png)
 
 ## 9. rmdir Command
@@ -302,3 +303,12 @@ Applying diff command with -u option we get the following output:
 The first file **history.txt** is indicated by —, and the second file **project.sh** is indicated by +++. 
 The first two lines of this output show us information about **history.txt** and **project.sh**. It lists the file name, modification date, and modification time of each of our files, one per line. 
 After that the next line has two at sign @ followed by a line range from the first file (in our case lines 1 through 4, separated by a comma) prefixed by – and then space and then again followed by a line range from the second file prefixed by + and at the end two at sign @. Followed by the file content in output tells us which line remain unchanged and which lines needs to added or deleted(indicated by symbols) in the file 1 to make it identical to file 2. 
+
+##  20. tar command:
+
+The tar command archives multiple files into a TAR file - a common Linux format similar to ZIP, with optional compression.
+
+Here's the basic syntax:
+
+```tar [options] [archive_file] [file or directory to be archived]```
+
