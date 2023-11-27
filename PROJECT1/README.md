@@ -15,7 +15,7 @@ Upadte a list of packages in package manager
 
 `run` 
 
-`sudo apt ugrade`
+```sudo apt ugrade```
 
 ![Alt text](images/sudo.png)
 
@@ -330,5 +330,7 @@ The tar command archives multiple files into a TAR file - a common Linux format 
 
 Here's the basic syntax:
 
-```tar [options] [archive_file] [file or directory to be archived] ```
+```
+tar [options] [archive_file] [file or directory to be archived] 
+```
 
