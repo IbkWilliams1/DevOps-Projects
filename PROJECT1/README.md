@@ -382,12 +382,37 @@ output NUM (default 3) lines of unified context
 ```
 
 ##  20. tar command:
+1. ###  Tar command to archive files
 
 The tar command archives multiple files into a TAR file - a common Linux format similar to ZIP, with optional compression.
 
 Here's the basic syntax:
-
+To compress files e.g `superman` and `superman2` to make `super.tar`
 ```
 tar [options] [archive_file] [file or directory to be archived] 
 ```
+```
+tar cvf /home/ibukun/Desktop/super. tar superman superman2
+```
+![Alt text](images/tar.png)
 
+The ***options***
+
+-   ***c*** means create file
+
+-   ***v*** means view file
+
+-   ***f*** means file
+
+the above code will create a archived super.tar file on the Desktop directory.
+
+2. #### Tar command to extract file
+ 
+ ```
+ tar xvf super. tar 
+```
+![Alt text](images/tar_extract.png)
+
+The ***options***
+
+-   ***x*** means extract file
