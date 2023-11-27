@@ -274,9 +274,11 @@ This will take the output of *cat history.txt* and display only the last two lin
 
 ##  18. diff Command
 
-diff stands for difference. This command is used to display the differences in the files by comparing the files line by line
+diff stands for difference. This command is used to display the differences in the files by comparing the files ***line by line***
 
-*diff [options] File1 File2*
+```diff - compare files line by line```
+
+***diff [options] File1 File2***
 
 `OPTION`
 Linux system offers two different ways to view the diff command output i.e. context mode and unified mode. 
@@ -300,9 +302,27 @@ Applying diff command with -u option we get the following output:
 
 ![Alt text](<images/diff -u.png>)
 
-The first file **history.txt** is indicated by —, and the second file **project.sh** is indicated by +++. 
-The first two lines of this output show us information about **history.txt** and **project.sh**. It lists the file name, modification date, and modification time of each of our files, one per line. 
-After that the next line has two at sign @ followed by a line range from the first file (in our case lines 1 through 4, separated by a comma) prefixed by – and then space and then again followed by a line range from the second file prefixed by + and at the end two at sign @. Followed by the file content in output tells us which line remain unchanged and which lines needs to added or deleted(indicated by symbols) in the file 1 to make it identical to file 2. 
+The first file **superman** is indicated by —, and the second file **superman2** is indicated by +++. 
+The first two lines of this output show us information about **superman** and **superman2**. It lists the file name, modification date, and modification time of each of our files, one per line. 
+After that the next line has two at sign @ followed by a line range from the first file (in our case lines 1 through 3, separated by a comma) prefixed by – and then space and then again followed by a line range from the second file prefixed by + and at the end two at sign @. Followed by the file content in output tells us which line remain unchanged and which lines needs to added or deleted(indicated by symbols) in the file 1 to make it identical to file 2. 
+
+##### The OPTION can  be any of these below 
+Depending on the task to achieve
+```-- normal
+output a normal diff (the default)
+
+-q, -- brief
+report only when files differ
+
+-s, -- report-identical-files
+report when two files are the same
+
+-c, -C NUM, -- context[=NUM]
+output NUM (default 3) lines of copied context
+
+-u, -U NUM, -- unified[=NUM]
+output NUM (default 3) lines of unified context
+```
 
 ##  20. tar command:
 
@@ -310,5 +330,5 @@ The tar command archives multiple files into a TAR file - a common Linux format 
 
 Here's the basic syntax:
 
-```tar [options] [archive_file] [file or directory to be archived]```
+```tar [options] [archive_file] [file or directory to be archived] ```
 
