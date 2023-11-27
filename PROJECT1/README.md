@@ -15,7 +15,9 @@ Upadte a list of packages in package manager
 
 `run` 
 
-```sudo apt ugrade```
+```
+sudo apt ugrade
+```
 
 ![Alt text](images/sudo.png)
 
@@ -25,7 +27,9 @@ The "pwd" command prints the full name (the full path) of current/working direct
 
 To do this, enter the following command.
 
-`pwd`
+```
+pwd
+```
 
 ![Alt text](images/pwd.png)
 
@@ -34,7 +38,9 @@ To navigate through the Linux files and directories, use the **cd** command with
 presently I'm in `/home/ibukun`. Therefore to navigate to subdirectory of ibukun *secondFolder* with fullpath.
 To do so, enter the following command:
 
-`cd Desktop/First_folder/secondFolder`
+```
+cd Desktop/First_folder/secondFolder
+```
 
 ![Alt text](images/cd_2_sub_with_fullpath.png)
 
