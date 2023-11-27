@@ -69,7 +69,11 @@ cd ..
 
 To move to the previous directory, enter the below command
 
-`cd -`
+
+```
+cd -
+
+```
 
 ![Alt text](images/cd_2_previous_directory.png)
 
@@ -81,12 +85,14 @@ ls is a Linux shell command that lists directory contents of files and directori
 #### ls [option] [file/directory]
 
 Description
+```
+ls -R   
 
-`ls -R`   
+ls -a
 
-`ls -a`
+ls -lh
 
-`ls -lh`
+```
 
 ![Alt text](<images/ls with options.png>)
 
@@ -97,9 +103,12 @@ Cat command is used to display the content of files
 ![Alt text](images/cat_4_view_file.png)
 
 ### - Create a File with cat command
-To create a file called “report.txt”, enter:
+To create a file called “report.txt”, Type:
 
-`cat >report.txt`
+```
+cat > report.txt
+```
+
 
 Type the following text:
 
@@ -109,7 +118,7 @@ You need to press [CTRL] + [D] i.e. hold the control key down, then tap d.
 
 ![Alt text](images/cat_create_file_wt_text.png)
 
-Another way to use "cat" command
+Another way to use ***cat*** command
 
 ### - To Combine Two Or More Files and store the output in another file
 ![Alt text](images/cat_2_combine_files.png)
@@ -120,7 +129,9 @@ For examples
 
 `cp [sourcefile] [destination]`
 
-`cp [filename1.txt filename2.txt filename3.txt] [/home/username/Documents]`
+```
+cp [filename1.txt filename2.txt filename3.txt] [/home/username/Documents]
+```
 
 ![Alt text](images/cp_2_another_destination.png)
 
