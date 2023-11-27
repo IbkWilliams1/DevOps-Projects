@@ -137,8 +137,10 @@ cp [filename1.txt filename2.txt filename3.txt] [/home/username/Documents]
 
 If copying a directory, you can use "-r" option
 For examples 
+```
+cp -r sourcedirectory destination
+```
 
-`cp -r sourcedirectory destination`
 
 ![Alt text](images/cp_directory_2_another_destination.png)
 
@@ -157,7 +159,9 @@ For example.
 change directory "cd" to the Documents, list the content of the directory with ls command and then rename 
 myscript.sh to darey_script.sh with the bellow command
 
-`mv myscript.sh darey_script.sh`
+```
+mv myscript.sh darey_script.sh
+```
 
 ![Alt text](images/mv_rename.png)
 
@@ -170,7 +174,9 @@ myscript.sh to darey_script.sh with the bellow command
 
 -   To make a new directory "songs" inside TeraBox, type this command
 
-```mkdir TeraBox/song```
+```
+mkdir TeraBox/song
+```
 
 
 ![Alt text](images/mkdir_new_dir_in2_dir.png)
@@ -179,13 +185,16 @@ myscript.sh to darey_script.sh with the bellow command
 
 -   This command is used to permanently delete an empty directory.
 
-`rmdir songs/`
-
+```
+rmdir songs/
+```
 ![Alt text](images/rmdir_empty.png)
 
 -   To delete directory that has content, cd to the super-directory or parent directory, then type the following command
 
-`rm -r TeraBox/songs`
+```
+rm -r TeraBox/songs
+```
 
 ![Alt text](images/rm_delete_dir.png)
 
@@ -195,7 +204,9 @@ This is use to create file or files by separating the files with a space
 First list the content of TeraBox and it return nothing. Then **cd into TeraBox**
 Type the following command
 
-`touch file1.txt file2.txt`
+```
+touch file1.txt file2.txt
+```
 
 ls the content to show what is inside
 
@@ -214,7 +225,9 @@ The find command to search for files within a specific directory and perform sub
 
 Use the following command
 
-`find /home -name file1.txt`
+```
+find /home -name file1.txt
+```
 
 ![Alt text](images/find.png)
 
@@ -223,7 +236,9 @@ Use the following command
 Grep can be use to find or search a regular expression or string in a text file. This is demonstrated below.
 Run the command below
 
-`grep Warrior project.sh`
+```
+grep Warrior project.sh
+```
 
 ![output](images/grep.png)
 
@@ -232,7 +247,9 @@ As you can see, grep has not only searched and matched the string “Warrior” 
 ## 14.  df Command:
 The syntax below is use to check the current directory's system disk space usage in a human-readable format
 
-`df -h`
+```
+df -h
+```
 
 `df [options] [file]`
 
@@ -255,26 +272,35 @@ For instance, you want to view the first ten lines of history.txt, located in th
 To know the full content of history file
 
 RUN this command
-`cat history.txt`
+
+```
+cat history.txt
+```
 
 ![Alt text](images/history_view.png)
 
 Then type this command to see the first ten lines
 
-`head history.txt`
+```
+head history.txt
+```
 
 ![Alt text](images/history_head.png)
 
 The head command is also used
 to output piped data to the CLI.
 
-`cat historty.txt | head`
+```
+cat historty.txt | head
+```
 
 ![Alt text](images/some_command_piped_2_head.png)
 
 This will take the output of *cat history.txt* and display only the first five lines of that output specifying the number of lines you want to display with the -n option, like this:
 
-`cat history.txt | head -n 5`
+```
+cat history.txt | head -n 5
+```
 
 ![Alt text](images/head_view_n_line.png)
 
@@ -286,14 +312,18 @@ Here's the general syntax:
 
 *tail [option] [file]*
 
-`tail history.txt`
+```
+tail history.txt
+```
 
 ![Alt text](images/tail_view.png)
 
 This will take the output of *cat history.txt* and display only the last two lines of that output specifying the number of lines you want to display with the -n option, like this:
 
 
-`cat history.txt | tail -n 2`
+```
+cat history.txt | tail -n 2
+```
 
 ![Alt text](images/tail_view_n_line.png)
 
@@ -301,7 +331,9 @@ This will take the output of *cat history.txt* and display only the last two lin
 
 diff stands for difference. This command is used to display the differences in the files by comparing the files ***line by line***
 
-```diff - compare files line by line```
+```
+diff - compare files line by line
+```
 
 ***diff [options] File1 File2***
 
