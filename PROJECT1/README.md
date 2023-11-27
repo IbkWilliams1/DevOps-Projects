@@ -15,12 +15,15 @@ Upadte a list of packages in package manager
 
 `run` 
 
+
 ```
 sudo apt ugrade
 
 ```
 
+
 ![Alt text](images/sudo.png)
+
 
 ## 2.  pwd command
 
@@ -42,7 +45,6 @@ To do so, enter the following command:
 
 ```
 cd Desktop/First_folder/secondFolder
-
 ```
 
 ![Alt text](images/cd_2_sub_with_fullpath.png)
