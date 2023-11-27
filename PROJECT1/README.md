@@ -17,6 +17,7 @@ Upadte a list of packages in package manager
 
 ```
 sudo apt ugrade
+
 ```
 
 ![Alt text](images/sudo.png)
@@ -29,6 +30,7 @@ To do this, enter the following command.
 
 ```
 pwd
+
 ```
 
 ![Alt text](images/pwd.png)
@@ -40,6 +42,7 @@ To do so, enter the following command:
 
 ```
 cd Desktop/First_folder/secondFolder
+
 ```
 
 ![Alt text](images/cd_2_sub_with_fullpath.png)
@@ -55,7 +58,10 @@ To do so, enter the following command:
 Here are some shotcuts to you navigate.
 To move up directory, enter the below command
 
-`cd ..`
+```
+cd ..
+
+```
 
 ![Alt text](images/cd_up_directory.png)
 
