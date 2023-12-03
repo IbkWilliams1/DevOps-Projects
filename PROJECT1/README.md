@@ -411,6 +411,9 @@ the above code will create a archived super.tar file on the Desktop directory.
  ```
  tar xvf super. tar 
 ```
+
+While the above command will extract super.tar file to same directory.
+
 ![Alt text](images/tar_extract.png)
 
 The ***options***
