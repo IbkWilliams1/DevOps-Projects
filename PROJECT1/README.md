@@ -416,6 +416,8 @@ While the above command will extract super.tar file to same directory.
 
 ![Alt text](images/tar_extract.png)
 
+![Alt text](<images/tar viewed.png>)
+
 The ***options***
 
 -   ***x*** means extract file
