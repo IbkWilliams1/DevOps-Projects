@@ -430,3 +430,10 @@ The ***options***
     ``` 
     tar -tvf super.tar 
     ```
+    -   To archive and add to existing archive
+
+    ```
+    tar -uvf super.tar spoon
+    ```
+    ![Alt text](images/2_extract.png)
+    ![Alt text](images/2_extract_2.png)
