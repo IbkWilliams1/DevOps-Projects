@@ -421,3 +421,12 @@ While the above command will extract super.tar file to same directory.
 The ***options***
 
 -   ***x*** means extract file
+    -   To compress super.tar 
+    ```
+    gzip super.tar
+    ```
+    -   To list the content of super.tar
+
+    ``` 
+    tar -tvf super.tar 
+    ```
