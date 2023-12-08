@@ -437,3 +437,27 @@ The ***options***
     ```
     ![Alt text](images/2_extract.png)
     ![Alt text](images/2_extract_2.png)
+
+File Permissions and Ownership
+
+##  21. chmod command:
+This is a command that modifies a file or directory's read, write and execute permissions.Each file in Linux is associated with 3 user classes - Owner, group member, and others.
+The bellow command shows the level of permissions on files and directories 
+```
+ls -ltr
+```
+```
+chmod 000 practiky  
+```
+![Alt text](images/chmod_1.png)
+![Alt text](images/chmod_2.png)
+
+The permission of project.sh is modified by the following command
+
+```
+chmod 400 project.sh
+```
+![Alt text](images/chmod_3.png)
+
+##  22. chown command:
+This is used to change the ownership of a file, directory or symbollic link to a specified username.
