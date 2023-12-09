@@ -461,3 +461,36 @@ chmod 400 project.sh
 
 ##  22. chown command:
 This is used to change the ownership of a file, directory or symbollic link to a specified username.
+The existing owner of assignment1 file is root user, root group.
+Run the following command to change the user from root to ibukun
+
+```
+sudo chown ibukun assignment1
+```
+![Alt text](images/chown_1.png)
+
+##  23. jobs command
+
+The command can be jobs [-lnprs]
+
+```
+jobs -l
+```
+```
+jobs -r
+```
+![Alt text](images/jobs.png)
+
+##  24. kill
+
+The kill command is use terminate a process. To terminate a process you must know (PID) process ID.
+
+Run below command to identify the process and ID
+```
+ps -C
+```
+and will kill the processs
+```
+kill [PID]
+```
+![Alt text](images/kill.png)
