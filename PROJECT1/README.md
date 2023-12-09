@@ -489,8 +489,93 @@ Run below command to identify the process and ID
 ```
 ps -C
 ```
-and will kill the processs
+and below will kill the processs
 ```
 kill [PID]
 ```
 ![Alt text](images/kill.png)
+
+##  25. ping command
+
+```
+ping [option] [hostname_or_IP_address]
+```
+
+The ping command is use to test the reachability of a host on internet Protocol (IP) network.
+
+For example:
+
+```
+ping google.com
+```
+![Alt text](images/ping1.png)
+To stop the command, you can usually press Ctrl + C
+
+##  26. wget command
+
+The  wget command in linux  is used to download files from the internet. It works in the background without hindering others processes
+
+```
+wget [URL]
+```
+For examples:
+
+```
+wget https://nhcps.com/wp-content/uploads/2023/08/CPR-Handbook.pdf
+```
+![Alt text](images/wget.png)
+
+This command will download the specified pdf file from the given directory
+
+##  27. uname command
+The uname command in Linux is used to display system information. When used without any options, it provides basic information about the operating system. To use it, open a terminal and type:
+
+RUN
+
+```
+uname
+```
+You can also use various options with uname to get specific information. For example:
+
+To display the operating system name, use:
+
+```
+uname -s
+```
+To show the kernel name, use:
+
+RUN
+
+```
+uname -r
+```
+
+![Alt text](images/uname.png)
+
+##  28. Top command
+
+The ***top*** command in Linux provides a dynamic, rea-time view of system processes. It displays information  such as CPU usage, memory usage, and a list of processes. Pressing 'q' exists the top command.
+![Alt text](images/top.png)
+
+##  29. history command
+With history, the system will list up to 500 previously executed commands, allowing you to reuse them without re-
+entering.
+
+To run it, enter the command below:
+
+```
+history
+```
+![Alt text](images/history.png)
+
+To delete an history position  For example ***258*** position 
+run it, enter the command below:
+
+```
+history -d 258
+```
+![Alt text](images/history_position_258.png)
+
+Run history to confirm deletion.
+
+![Alt text](images/history_position_258_delete_confirm.png)
