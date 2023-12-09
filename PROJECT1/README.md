@@ -560,7 +560,9 @@ The ***top*** command in Linux provides a dynamic, rea-time view of system proce
 ##  29. history command
 With history, the system will list up to 500 previously executed commands, allowing you to reuse them without re-
 entering.
+This command supports many options, such as:
 
+-c clears the complete history list. -d offset deletes the history entry at the OFFSET position. -a appends history lines.
 To run it, enter the command below:
 
 ```
@@ -579,3 +581,78 @@ history -d 258
 Run history to confirm deletion.
 
 ![Alt text](images/history_position_258_delete_confirm.png)
+
+##  30. man command
+
+The man command provides a user manual of any commands or utilities you can run in Terminal, including the name,
+description, and options.
+
+It consists of nine sections:
+
+Executable programs or shell commands System calls Library calls Games Special files File formats and conventions System
+administration commands Kernel routines Miscellaneous To display the complete manual, enter:
+
+```
+man man
+```
+![Alt text](images/man_man.png)
+
+Press 'q' to quit
+
+##  31. echo command
+
+The ***echo*** command in Linux is used to display text on the terminal. For example:
+
+```
+echo Oluwafemi Ibukun
+```
+```
+echo 'I am learning Linux for DevOps'
+```
+![Alt text](images/echo.png)
+
+##  32. zip, unzip commands:
+zip command to compress your files into a ZIP file, a universal format commonly used on Linux. It automatically
+choose the best compression ratio.
+
+The zip command is also useful for archiving files and directories and reducing disk usage.
+
+To use the zip command to archive files and directories in Linux, you can use the following syntax:
+
+list the content of the Desktop directory to see the files and sub-directories
+
+```
+ls
+```
+
+```
+zip file2Achieve.zip superman history.txt
+```
+![Alt text](images/zip_files2zip.png)
+![Alt text](images/zip_files2zip2.png)
+The above create file@Achieve.zip containing files "superman" and "history.txt" 
+To include directories and thier contents, I use the '-r' (recursive) option:
+
+```
+zip -r zippedirectory.zip practiky/ TeraBox/
+```
+![Alt text](images/zippedirectory.png)
+
+##  33. hostname command:
+
+Run the hostname command to know the system's hostname. I can execute it with or without an option. Here's the
+
+general syntax:
+
+***hostname [option]***
+
+There are many optional flags to use, including:
+
+-a or -alias displays the hostname's alias. -A or -all-fqdns displays the machine's Fully Qualified Domain Name (FQDN). -i or
+-ip-address displays the machine's IP address. For example, enter the following command to know your computer's IP
+address:
+
+```
+hostname -i
+```
+![Alt text](images/hostname.png)
