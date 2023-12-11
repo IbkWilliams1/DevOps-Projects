@@ -612,6 +612,7 @@ echo 'I am learning Linux for DevOps'
 ![Alt text](images/echo.png)
 
 ##  32. zip, unzip commands:
+
 zip command to compress your files into a ZIP file, a universal format commonly used on Linux. It automatically
 choose the best compression ratio.
 
@@ -656,3 +657,184 @@ address:
 hostname -i
 ```
 ![Alt text](images/hostname.png)
+
+##  34. useradd, userdel commands:
+
+Linux is a multi-user system, meaning more than one person can use it simultaneously. useradd is used to create a new
+account, while the passwd command allows you to add a password. Only those with root privileges or sudo can run the
+useradd command.
+
+When you use the useradd command, it performs some major changes:
+
+Edits the /etc/passwd, /etc/shadow, /etc/group, and /etc/gshadow files for the newly created accounts. Creates and
+populates a home directory for the user. Sets file permissions and ownerships to the home directory. Here's the basic
+syntax:
+
+***useradd [option] username***
+
+```
+sudo useradd lois
+```
+![Alt text](images/usseradd.png)
+
+##  35. apt-get command
+
+```
+apt-get
+```
+![Alt text](images/apt-get.png)
+
+##  36. nano, vi, jed command
+
+'nano' is a simple text editor that is commonly used in Unix-based operating systems, including Linux. It's user-friendly and easy to use, making it a popular choice for quick edits and simple text manipulation. 
+nano and vi come with the operating system, while jed has to be installed.
+
+The nano command denotes keywords and can work with most languages. To use it, enter the following command:
+1. For opening a file
+
+   ```
+    nano project.sh
+    ```
+![Alt text](images/nano_command.png)
+2. Saving a file:
+
+To save changes, press ***Ctrl + O*** (Hold down the Control key and press the O key).
+Press Enter to confirm the file name.
+The basic syntax
+3. Exiting nano:
+To exit nano, press Ctrl + X. If you have unsaved changes, nano will prompt you to save before exiting.
+4. Cut, copy, and paste:
+
+***Ctrl + K:*** Cut the current line.
+***Ctrl + U:*** Paste the cut text at the cursor.
+
+![Alt text](images/nano_editor.png)
+
+##  37. alias, unalias commands:
+
+alias allows you to create a shortcut with the same functionality as a command, file name, or text. When executed, it
+instructs the shell to replace one string with another.
+
+To use the alias command, enter this syntax:
+
+***alias Name=String***
+
+Type the below command
+
+```
+alias openthem="ls -lh"
+```
+It can be just one character to store your command like:
+```
+alias l="ls -lh"
+```
+![Alt text](images/alias_4_command.png)
+
+Typing 'alias' will list all the default aliases depending on the distribution
+
+![Alt text](images/alias.png)
+
+On the other hand, the unalias command delete the existing alias.
+Here is what the general syntax looks like:
+
+***unalias [alias_name]***
+
+Type the below command 
+
+```
+unalias openthem
+```
+
+##  38. su command:
+
+The switch user or su command allows you to run a program as a different user. It changes the administrative account in
+the current log-in session. This command is especially beneficial for accessing the system through SSH or using the GUI
+display manager when the root user is unavailable.
+
+Here's the general syntax of the command:
+
+***su [options] [username [argument]]***
+
+```
+sudo su sam
+```
+![Alt text](images/su.png)
+![Alt text](images/su_option.png)
+
+##  39. htop command
+'htop' is a command-line utility in Linux used for viewing and managing system processes. It provides an interactive, colorized display that allows you to monitor system resource usage in real-time. Here are some key features and usage information for the htop command:
+```
+sudo apt-get install htop
+```
+The above  command must be Run to install it on Debian-based systems, e.g ubuntu like mine
+![Alt text](images/htop_not_found.png)
+![Alt text](images/htop_install.png)
+
+***Running htop:***
+Once installed, you can run htop by simply typing the command in the terminal:
+
+```
+htop
+```
+![Alt text](images/htop_runing.png)
+####    Key features of htop:
+1.  Color-coded display:
+-   Different colors represent different types of resource usage, making it easier to identify processes.
+
+2.  Process list:
+-   The main part of the display shows a list of processes with information such as process ID (PID), user, CPU usage, memory usage, etc.
+
+3.  Column sorting:
+-   You can sort the process list based on various criteria such as CPU usage, memory usage, process age, etc. Use arrow keys to navigate and F6 to choose the sort column.
+
+4.  Search functionality:
+-   Press F3 to search for a specific process by name.
+5.  Process tree:
+-   You can visualize the process hierarchy as a tree to understand the parent-child relationships between processes.
+6.  Resource meters:
+-   Visual meters at the top of the screen show CPU, memory, and swap usage in real-time.
+7.  Process manipulation:
+-   You can send signals to processes (kill, stop, continue) directly from the htop interface.
+
+**Basic htop controls:**
+
+Arrow keys: Navigate through the process list.
+-   F1: Help menu with a list of keybindings.
+-   F2: Setup menu for configuration options.
+-   F3: Search for a process by name.
+-   F4: Filter processes by various criteria.
+-   F5: Tree view of processes.
+-   F6: Choose a column for sorting.
+-   F9: Kill a process (sends a signal).
+-   F10: Quit htop.
+
+##  40. ps command
+The **ps** command is a command-line utility in Unix-like operating systems, including Linux, that provides information about currently running processes. It can display information such as process IDs (PIDs), terminal associated with the process, CPU and memory usage, and more
+
+Here are some common uses of the ps command:
+1. Display Information for All Processes:
+
+```
+ps aux
+```
+![Alt text](images/ps_aux.png)
+This command shows a detailed list of all processes running on the system.
+
+2.  Display Information for a Specific Process:
+```
+ps -p <PID>
+```
+![Alt text](images/ps_PID.png)
+Replace '<PID>' with the actual process ID. This command shows detailed information about a specific process.
+
+3. TreeView Processes
+This command displays processes in a tree-like structure, showing parent-child relationships.
+
+```
+ps auxf
+```
+This command below sorts processes by CPU usage, with the most CPU-intensive processes at the top.
+```
+ps aux --sort=-%cpu
+```
+![Alt text](images/ps_aux_CPU_usage.png)
