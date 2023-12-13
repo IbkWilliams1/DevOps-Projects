@@ -7,8 +7,18 @@ Before we can initialize a git repository, we must have installed git on our com
 
 -   Open a terminal on the computer e.g Git bash; the default terminal after downloading and installing Git.
 
--   We open the terminal and create a working folder or directory e.g DevOps folder using this command ```mkdir DevOps.```
+-   We open the terminal and create a working folder or directory e.g DevOps folder using this command 
+```
+mkdir DevOps.
+```
 
--   After creating the folder or directory, we'll have to change or move into the working directory using this command ```cd DevOps.```
+-   After creating the folder or directory, we'll have to change or move into the working directory using this command 
+```
+cd DevOps.
+```
 
--   While inside the folder/directory, we use the ```git init``` command to initialize our repository.
+-   While inside the folder/directory, we use the below command to initialize our repository.
+```
+git init
+``` 
+![Alt text](images/initialization.png)
