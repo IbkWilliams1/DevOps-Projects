@@ -22,6 +22,7 @@ cd DevOps.
 git init
 ``` 
 ![Alt text](images/initialization.png)
+
 ![Alt text](images/git_repo.png)
 
 ##  MAKING THE FIRST COMMIT
@@ -35,4 +36,5 @@ let's make our first commit by following the below steps;
 -   Then we add the changes to git staging area using this command git add .
 
 -   To commit the changes to git, we use this command git commit -m "my first commit on index.html". The -m option/flag is used to add a commit message. The commit message provides context about the commit.
+
 ![Alt text](images/first_commit.png)
