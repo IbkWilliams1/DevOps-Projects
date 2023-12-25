@@ -82,3 +82,14 @@ e.g. I change to main branch
 ```
 git checkout main
 ```
+![Alt text](images/switch2oldbranch.png)
+
+#### Merging a Branch into another Branch
+we have two branches main and my-new-branch. And we want to add the content of branch my-new-branch into main.
+
+First we change into branch main and run the git command below:
+
+```
+git merge my-new-branch
+```
+
