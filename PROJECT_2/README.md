@@ -68,7 +68,7 @@ git checkout -b my-new-branch
 ```
 
 ![Alt text](images/my-new-branch.png)
-####    To display your Git branches, 
+###    To display your Git branches, 
 utilize the following command to list them in your local repository.
  
  ```
@@ -76,7 +76,7 @@ utilize the following command to list them in your local repository.
  ```
 ![Alt text](images/granch-check.png)
 
-####    Change into an Old Branch
+###    Change into an Old Branch
 To change into an exiting or old branch use the command below:
 e.g. I change to main branch
 ```
@@ -84,7 +84,7 @@ git checkout main
 ```
 ![Alt text](images/switch2oldbranch.png)
 
-#### Merging a Branch into another Branch
+### Merging a Branch into another Branch
 we have two branches main and my-new-branch. And we want to add the content of branch my-new-branch into main.
 
 First we change into branch main and run the git command below:
@@ -94,3 +94,14 @@ git merge my-new-branch
 ```
 
 ![Alt text](images/mergeNew2old.png)
+
+###    Deleting a git branch
+When new feature is added to an application, Its often done in a feature branch. Usually this feature branch is deleted when the code must have tested and
+merged into a staging or dev environment depending on the branch strategy of the team.
+
+Git branch can be deleted with the command below:
+
+```
+git branch -d my-new-branch
+```
+![Alt text](images/branchDelete.png)
