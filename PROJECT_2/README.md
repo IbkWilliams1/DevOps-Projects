@@ -38,3 +38,47 @@ let's make our first commit by following the below steps;
 -   To commit the changes to git, we use this command git commit -m "my first commit on index.html". The -m option/flag is used to add a commit message. The commit message provides context about the commit.
 
 ![Alt text](images/first_commit.png)
+
+ ## Working with Branches
+### Working with Branches
+Imagine you have a note book and you want to write different story on different pages of your note book so that you do not mess up your previous note.
+
+git branch helps you create a different copy(page) of your source code. In your new branch you can make changes as you please. Your change is independent of
+what is available in the main copy.
+
+Git branch is commonly used to develop new feature of your application. You will agree with me that the initial code is untested and as such can not be added to
+the code base of your live application.
+
+Git branch is also an important tool for collaboration within remote teams(developers working from different location). They can make separate branches while
+working on same feature. And at the end of the day, converge their code to one branch.
+
+Make your first git Branch
+To make a new branch run this command: 
+
+```
+    git checkout -b
+```
+
+The use of the -b flag facilitates the creation and switching to a new branch. Now, we'll proceed to establish our initial branch by adhering to the following guidelines:
+
+1. After completing our initial commit in the preceding lesson,
+2. Generate a new branch by executing the specified command.
+```
+git checkout -b my-new-branch
+```
+
+![Alt text](images/my-new-branch.png)
+####    To display your Git branches, 
+utilize the following command to list them in your local repository.
+ 
+ ```
+ git branch
+ ```
+![Alt text](images/granch-check.png)
+
+####    Change into an Old Branch
+To change into an exiting or old branch use the command below:
+e.g. I change to main branch
+```
+git checkout main
+```
