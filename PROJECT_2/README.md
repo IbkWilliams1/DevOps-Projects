@@ -93,3 +93,4 @@ First we change into branch main and run the git command below:
 git merge my-new-branch
 ```
 
+![Alt text](images/mergeNew2old.png)
