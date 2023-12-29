@@ -164,3 +164,60 @@ To get the remote link click on the green button code, copy the https link. A sc
 git push origin main
 ```
 ![Alt text](images/push2main.png)
+##  Branch Management and Tagging
+### Introduction to Markdown Syntax
+Markdown syntax is a lightweight markup language that is widely used for formatting plain text. It allows you to add formatting elements to your text without
+using complex HTML or other formatting languages. Markdown is commonly used for creating documents, README files, forum posts, and even web pages.
+
+Here is the most commonly used markdown syntax elements:
+
+1. Headings: To create heading, use the hash symbol at the beginning of the line. The number of hash symbol used indicate the level of the heading.
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+
+2. Emphasis: asterisks or underscore is used to Emphasis text
+
+*italic* or _italic_
+
+**bold** or __bold__
+
+3. Lists: markdown has support for both ordered and unorderd list
+
+unordered list example:
+- Item 1
+- Item 2
+- Item 3
+- Item 4
+- Item 5
+- Item 6
+
+ordered list examples
+1. First item
+2. Second item
+3. Third item
+4. First item
+5. Second item
+6. Third item
+
+4. Links: : To create a hyperlink, use square brackets for the link text followed by parentheses containing the URL.
+
+example:
+
+[bureauveritas.com](https://www.bureauveritas.com)
+
+[unilorin.edu.ng](https://www.unilorin.edu.ng)
+
+5. Images: To display an image, use an exclamation mark followed by square brackets for the alt text and parentheses containing the image URL.
+e.g.
+
+![Nebula](images/pix.png)
+
+6. Code: To display code or code snippets, use backticks (') to enclose the code.
+
+example:
+
+`console.log('Welcome to bureauveritas.com')`
+
