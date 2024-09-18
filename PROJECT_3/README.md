@@ -77,15 +77,16 @@ To see if our web application server can respond to requests , use the public ip
 
 We use MySQL as a relational database to store and manage data on our site.
 
-Install mysql using the ```sudo apt install mysql``` command.
+Install mysql using the ```sudo apt install mysql-server -y``` command.
 
 ![alt text](images/mysql_installation.png)
 
 Use the ```sudo mysql_secure_installation``` command to remove insecure default settings and enable protection for the database.
 
 ![alt text](images/mysql_secure_config.png)
+![alt text](images/mysql_secure_config2.png)
 
-On successful secure configuration, ```sudo mysql``` on the terminal to have access to the MySQL DB.
+On successful secure configuration, ```sudo mysql -p``` on the terminal to have access to the MySQL DB.
 ![alt text](images/mysql_logging.png)
 Exit from the MySQL terminal by typing ```exit```.
 
@@ -96,10 +97,27 @@ PHP serves as a programming language which is useful for dynamically displaying 
 We need to install php alongside its modules, ```php-mysql``` which is php module that allows php to communicate with the mysql database, ```libapache2-mod-php``` which ensures that the apache web server handles the php contents properly.
 
 ```
-sudo apt install php php-mysql libapache2-mod-php.
+sudo apt install php php-mysql libapache2-mod-php
 ```
 ![alt text](images/php_installation.png)
 
 On successfull installation of php and its modules we can check the version to see if it was properly installed.
 ```php -v```
 ![alt text](images/php_version.png)
+
+## Enable PHP on the Website ##
+![alt text](images/creating_virtual_host_projectlamp.png)
+
+Setting up a virtual host for a website using Apache. Here's a summary of your steps:
+
+1. Created a virtual host domain called "ProjectLamp".
+    Apache on Ubuntu 20.04 has one server block enabled by default that is configured to serve documents from the /var/www/html
+directory. Add our own directory ```projectlamp``` next next to the default one ```/var/www/html```.
+
+Create the directory for projectlamp
+using 'mkdir' command as follows:
+2. Set the document root directory to "Project Lamp".
+3. Changed ownership of the "Project Lamp" directory using:
+
+
+
