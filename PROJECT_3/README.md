@@ -211,19 +211,19 @@ Prefarrably you can also use the DNS name, the port is optional as it defaults t
 The result from browser will be like below 
 ![index.html_view_4From_browser_via_IP_addr](images/index.html_view_4From_browser_via_IP_addr.png)
 
-## .......Enable PHP on the Website....... ##
+## Enable PHP on the Website 
 
 
 With the default DirectoryIndex settings on Apache, the index.html file takes precedence, lets modify this and give precedence to the index.php file.
 
-We need to edit the <y>/etc/apache2/mods-enabled/dir.conf</y> file and change the order in which the index.php file is listed within the DirectoryIndex directive:
+We need to edit the <r>/etc/apache2/mods-enabled/dir.conf</r> file and change the order in which the index.php file is listed within the DirectoryIndex directive:
 
-```
+```sh
 sudo nano /etc/apache2/mods-enabled/dir.conf
 ```
 
 Paste the below command inside the nano pop-up
-```
+```conf
    <IfModule mod_dir.c>
         #Change this:
         #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm

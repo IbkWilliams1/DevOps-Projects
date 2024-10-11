@@ -25,16 +25,16 @@ It will look like this:
 To display web pages to our site visitors, we will use Nginx, a high-performance web server. I'll install it using the apt package manager. Since this is the first time we're using apt in this session, begin by updating the server's package index. After that, you can install Nginx with the apt install command.
 
 ```sh
-$ sudo apt update -y
-$ sudo apt install nginx -y
+ sudo apt update -y
+ sudo apt install nginx -y
 ```
 ![update server](images/server-update.PNG)
 
  Once the installation is finished, the Nginx web server will be active and running on your Ubuntu 20.04 server.
 
 To verify that nginx was successfully installed and is running as a service in Ubuntu, run:
-```
-$ sudo systemctl status nginx
+```sh
+ sudo systemctl status nginx
 ```
 ![Nginx runing actively](images/nginx-running.PNG)
 
@@ -51,11 +51,11 @@ Our server is running and we can access it locally and from the Internet (Source
 
 First, let us try to check how we can access it locally in our Ubuntu shell, run:
 
-$ curl http://localhost:80
+ curl http://localhost:80
 
 or
 
-$ curl http://127.0.0.1:80
+ curl http://127.0.0.1:80
 
 I run the command ```curl http://localhost:80``` to assess it locally in my ubuntu shell
 
@@ -69,15 +69,15 @@ I aslo used http://13.60.172.201:80 to verify that it was correctly installed an
 Now that i have a web server up and running, i need to install a Database Management System (DBMS) to be able to store and manage data for MY site in a relational database. MySQL is a popular relational database management system used within PHP environments, so i will use it in this project.
 
 
-```
-$ sudo apt install mysql-server -y
+```sh
+ sudo apt install mysql-server -y
 ```
 ![installing_mysql](images/installing_mysql.PNG)
 
 When the installation is finished, log in to the MySQL console by typing:
 
 ```sh
-$ sudo mysql
+ sudo mysql
 ```
 This will connect to the MySQL server as the administrative database user root, which is inferred by the use of sudo when running this command. You should see output like this:
 
@@ -113,8 +113,8 @@ mysql> exit
 
 Start the interactive script by running:
 
-```
-$ sudo mysql_secure_installation
+```sh
+ sudo mysql_secure_installation
 ```
 ![mysql_secure_installation](images/mysql_secure_installation_config.PNG)
 
@@ -158,15 +158,15 @@ For the rest of the questions, press `Y` and hit the `ENTER` key at each prompt.
 
 When you’re finished, test if you’re able to log in to the MySQL console by typing:
 
-```
-$ sudo mysql -p
+```sh
+sudo mysql -p
 ```
 
 Notice the `-p` flag in this command, which will prompt you for the password used after changing the **root** user password.
 
 To exit the MySQL console, type:
 
-```
+```sql
 mysql> exit
 ```
 
@@ -189,7 +189,7 @@ While Apache embeds the PHP interpreter in each request, Nginx requires an exter
 To install these 2 packages at once, run:
 
 ```sh
-$ sudo apt install php-fpm php-mysql -y
+ sudo apt install php-fpm php-mysql -y
 ```
 ![php_installation](images/php_installation.PNG)
 
@@ -203,20 +203,20 @@ On Ubuntu 20.04, Nginx has one server block enabled by default and is configured
 
 I create the root web directory for **my_domain** as follows:
 
-```
-$ sudo mkdir /var/www/projectLEMP
+```sh
+ sudo mkdir /var/www/projectLEMP
 ```
 
 Next,I assign ownership of the directory with the $USER environment variable, which will reference my current system user:
 
-```
-$ sudo chown -R $USER:$USER /var/www/projectLEMP
+```sh
+ sudo chown -R $USER:$USER /var/www/projectLEMP
 ```
 
-Then, open a new configuration file in Nginx’s `sites-available` directory using my preferred command-line editor. Here, we’ll use `nano`:
+Then, open a new configuration file in Nginx’s `sites-available` directory using my preferred command-line editor. Here, I’ll use `nano`:
 
-```
-$ sudo nano /etc/nginx/sites-available/projectLEMP
+```sh
+ sudo nano /etc/nginx/sites-available/projectLEMP
 ```
 
 This will create a new blank file. I paste in the following bare-bones configuration:
@@ -262,13 +262,13 @@ Having done editing, save and close the file. If you’re using `nano`, you can 
 I activate the configuration by linking to the config file from Nginx’s `sites-enabled` directory:
 
 ```sh
-$ sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
+ sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
 ```
 
 This will tell Nginx to use the configuration next time it is reloaded. I can test my configuration for syntax errors by typing:
 
 ```sh
-$ sudo nginx -t
+ sudo nginx -t
 ```
 You shall see following message:
 
@@ -276,27 +276,28 @@ You shall see following message:
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
+![configuring _php](images/configuring_php.PNG)
 
-If any errors are reported, go back to your configuration file to review its contents before continuing.
+Note: If any errors are reported, go back to your configuration file to review its contents before continuing.
 
 We also need to disable default Nginx host that is currently configured to listen on port 80, for this run:
 
-```
+```sh
 sudo unlink /etc/nginx/sites-enabled/default
 ```
 
 When you are ready, reload Nginx to apply the changes:
 
-```
-$ sudo systemctl reload nginx
+```sh
+ sudo systemctl reload nginx
 ```
 
-My new website is now active, but the web root /var/www/projectLEMP is still empty. I create an index.html file in that location so that we can test that my new server block works as expected:
+My new website is now active, but the web root /var/www/projectLEMP is still empty. I'll create an index.html file in that location so that I can test that my new server block works as expected:
 
 ```sh
 sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html
 ```
-
+![alt text](images/configuring_php.PNG)
 Now I go to my browser and try to open my website URL using Pqublic IP address:
 
 ```
@@ -304,12 +305,52 @@ http://<Public-IP-Address>:80
 ```
 
 If you see the text from **_'echo'_** command you wrote to index.html file, then it means your Nginx site is working as expected.
+![alt text](images/echo_index_file.PNG)
 In the output you will see your server's public hostname (DNS name) and public IP address. You can also access your website in your browser by public DNS name, not only by IP - try it out, the result must be the same (port is optional)
 
 ```
 http://<Public-DNS-Name>:80
 ```
 
-You can leave this file in place as a temporary landing page for your application until you set up an `index.php` file to replace it. Once you do that, remember to remove or rename the `index.html` file from your document root, as it would take precedence over an `index.php` file by default.
 
-Your LEMP stack is now fully configured. In the next step, we’ll create a PHP script to test that Nginx is in fact able to handle `.php` files within your newly configured website.
+I leave this file in place as a temporary landing page for your application until I set up an `index.php` file to replace it. Once I do that, I will remove or rename the `index.html` file from your document root, as it would take precedence over an `index.php` file by default.
+
+My LEMP stack is now fully configured. In the next step, I’ll create a PHP script to test that Nginx is in fact able to handle `.php` files within my newly configured website.
+
+## Step 5 – Testing PHP with Nginx
+
+My LEMP stack is now completely set up. 
+
+At this point, my LEMP stack is completely installed and fully operational.
+
+I can test it to validate that Nginx can correctly hand `.php` files off to your PHP processor.
+
+I did this by creating a test PHP file in my document root. I open a new file called `info.php` within your document root in your text editor:
+
+```sh
+ nano /var/www/projectLEMP/info.php
+```
+
+I paste the following lines into the new file. This is valid PHP code that will return information about your server:
+
+```php
+<?php
+phpinfo();
+```
+
+I can now access this page in my web browser by visiting the domain name or public IP address you’ve set up in your Nginx configuration file, followed by `/info.php`:
+
+```
+http://`server_domain_or_IP`/info.php
+```
+You will see a web page containing detailed information about your server:
+
+
+
+After checking the relevant information about your PHP server through that page, it’s best to remove the file you created as it contains sensitive information about my PHP environment and my Ubuntu server. You can use `rm` to remove that file:
+
+```
+$ sudo rm /var/www/your_domain/info.php
+```
+
+You can always regenerate this file if you need it later.
