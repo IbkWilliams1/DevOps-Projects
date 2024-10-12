@@ -229,7 +229,7 @@ server {
     server_name projectLEMP www.projectLEMP;
     root /var/www/projectLEMP;
 
-    index index.html index.htm index.php;
+    index index.php index.html index.htm ;
 
     location / {
         try_files $uri $uri/ =404;
@@ -237,7 +237,7 @@ server {
 
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+        fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;
      }
 
     location ~ /\.ht {
@@ -245,6 +245,11 @@ server {
     }
 
 }
+```
+`NOTE:` that you must put the corresponding version of the php you installed in your configuration file. Here I have ``php8.3`` 
+To get the version Run: 
+```sh
+php -v
 ```
 
 Here’s what each of these directives and location blocks do:
@@ -344,13 +349,152 @@ I can now access this page in my web browser by visiting the domain name or publ
 http://`server_domain_or_IP`/info.php
 ```
 You will see a web page containing detailed information about your server:
+![php_page](images/php_page.PNG)
 
 
 
-After checking the relevant information about your PHP server through that page, it’s best to remove the file you created as it contains sensitive information about my PHP environment and my Ubuntu server. You can use `rm` to remove that file:
+After checking the relevant information about my PHP server through that page, it’s best to remove the file I created as it contains sensitive information about my PHP environment and my Ubuntu server. I'll use `rm` to remove that file:
 
-```
-$ sudo rm /var/www/your_domain/info.php
+```sh
+ sudo rm /var/www/your_domain/info.php
 ```
 
 You can always regenerate this file if you need it later.
+
+## Step 6 — Retrieving data from MySQL database with PHP
+
+In this step you will create a test database (DB) with simple "To do list" and configure access to it, so the Nginx website would be able to query data from the DB and display it.
+
+At the time of this writing, the native MySQL PHP library `mysqlnd` doesn’t support `caching_sha2_authentication`, the default authentication method for MySQL 8. I’ll need to create a new user with the `mysql_native_password` authentication method in order to be able to connect to the MySQL database from PHP.
+
+We will create a database named **ovil_database** and a user named **ibukun_user**, but you can replace these names with different values.
+
+First, connect to the MySQL console using the **root** account:
+
+```
+$ sudo mysql
+```
+
+To create a new database, run the following command from your MySQL console:
+
+```
+mysql> CREATE DATABASE `ovil_database`;
+```
+
+Now you can create a new user and grant him full privileges on the database you have just created.
+
+The following command creates a new user named `ibukun_user`, using mysql_native_password as default authentication method. We’re defining this user’s password as `Qwerty@59!`, but you should replace this value with a secure password of your own choosing.
+
+```
+mysql>  CREATE USER 'ibukun_user'@'%' IDENTIFIED WITH mysql_native_password BY 'Qwerty@59!';
+```
+
+Now we need to give this user permission over the `ovil_database` database:
+
+```
+mysql> GRANT ALL ON ovil_database.* TO 'ibukun_user'@'%';
+```
+
+This will give the **ibukun_user** user full privileges over the **ovil_database** database, while preventing this user from creating or modifying other databases on your server.
+
+Now exit the MySQL shell with:
+
+```
+mysql> exit
+```
+![alt text](images/creating_ovil_DB.PNG)
+You can test if the new user has the proper permissions by logging in to the MySQL console again, this time using the custom user credentials:
+
+```
+$ mysql -u example_user -p
+```
+
+Notice the `-p` flag in this command, which will prompt you for the password used when creating the `ibukun_user` user. After logging in to the MySQL console, confirm that you have access to the `ovil_database` database:
+
+```
+mysql> SHOW DATABASES;
+```
+
+This will give you the following output:
+![alt text](images/show_DB.PNG)
+
+Next, I’ll create a test table named **todo_list**. From the MySQL console, I ran the following statement:
+
+```
+CREATE TABLE ovil_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));
+```
+I inserted a few rows of content in the test table. I repeated the next command a few times, using different VALUES:
+
+```
+mysql> INSERT INTO ovil_database.todo_list (content) VALUES ("My first important item");
+
+```
+
+To confirm that the data was successfully saved to my table, run:
+
+```
+mysql>  SELECT * FROM ovil_database.todo_list;
+```
+
+The following  is the output:
+![alt text](images/ovil_database.todo.PNG)
+
+After confirming that I have valid data in your test table, I can exit the MySQL console:
+
+![alt text](images/Display_ovil_database.todo.PNG)
+
+```
+mysql> exit
+```
+
+Now I can create a PHP script that will connect to MySQL and query for my content.I  create a new PHP file in your custom web root directory using your preferred editor. I’ll use nano for that:
+
+```sh
+nano /var/www/projectLEMP/todo_list.php
+```
+
+The following PHP script connects to the MySQL database and queries for the content of the **todo_list** table, displays the results in a list. If there is a problem with the database connection, it will throw an exception.
+
+The following content was copied into my `todo_list.php` script:
+
+```
+<?php
+$user = "ibukun_user";
+$password = "Qwerty@59!";
+$database = "ovil_database";
+$table = "todo_list";
+
+try {
+  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+  echo "<h2>TODO</h2><ol>";
+  foreach($db->query("SELECT content FROM $table") as $row) {
+    echo "<li>" . $row['content'] . "</li>";
+  }
+  echo "</ol>";
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+```
+![alt text](images/todo.list_php_script.PNG)
+
+The file was Saved and close when done editing.
+
+I can now access this page in my web browser by visiting the domain name or public IP address configured for your website, followed by `/todo_list.php:`
+
+```
+http://<Public_domain_or_IP>/todo_list.php
+```
+You should see a page like this, showing the content you’ve inserted in your test table:
+![alt text](images/todo_ist.PNG)
+
+
+That means my PHP environment is ready to connect and interact with your MySQL server.
+If you follow it through like 
+## Congratulations!
+
+In this guide , I have built a flexible foundation for serving PHP websites and applications to my visitors, using Nginx as web server and MySQL as database management system.
+
+<img src="https://darey-io-pbl-projects-images.s3.eu-west-2.amazonaws.com/project2/medal_2.png"  width="936px" height="550px">
+
+
