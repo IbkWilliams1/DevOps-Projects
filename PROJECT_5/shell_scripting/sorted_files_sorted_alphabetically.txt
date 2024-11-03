@@ -1,0 +1,12 @@
+baskUp.sh
+calculation.sh
+file1.txt
+file2.txt
+file3.txt
+function.sh
+integer.sh
+iterating.sh
+navigating-linux-filesystem.sh
+sorted_files_sorted_alphabetically.txt
+sorting.sh
+user-input.sh

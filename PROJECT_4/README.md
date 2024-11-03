@@ -496,5 +496,3 @@ If you follow it through like
 In this guide , I have built a flexible foundation for serving PHP websites and applications to my visitors, using Nginx as web server and MySQL as database management system.
 
 <img src="https://darey-io-pbl-projects-images.s3.eu-west-2.amazonaws.com/project2/medal_2.png"  width="936px" height="550px">
-
-
