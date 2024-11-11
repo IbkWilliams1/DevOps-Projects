@@ -295,7 +295,7 @@ touch backup.sh
 ![alt text](images/backup_touch.png)
 Step 2: Make the script executable:
 ```sh
-sudo chmod +x backup.sh
+chmod +x backup.sh
 ```
 Step 3: Open the file in a text editor to add your script content:
 ```sh
@@ -308,7 +308,10 @@ Step 4: Write the following script inside `backup.sh`:
 
 # Define the source directory and backup directory
 source_dir="/path/to/source_directory"
+# Replace the /path/to/source_directory with this  C:\Users\ibuku\OneDrive\Desktop\source_file or define your own
+
 backup_dir="/path/to/backup_directory"
+# Replace the /path/to/backup_directory with this C:\Users\ibuku\Downloads\backup or define your own
 
 # Create a timestamp with the current date and time
 timestamp=$(date +"%Y%m%d%H%M%S")
@@ -325,3 +328,12 @@ cp -r "$source_dir"/* "$backup_dir_with_timestamp"
 # Display a message indicating the backup process is complete
 echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
 ```
+![alt text](images/backup_editor.png)
+
+Step 5: Run the script:
+```sh
+./backup.sh
+```
+![alt text](images/backup.sh_output.png)
+
+## THANK YOU
