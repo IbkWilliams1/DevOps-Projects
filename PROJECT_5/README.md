@@ -4,15 +4,25 @@
 
 ## Shell Scripting Syntax Elements
 
+<<<<<<< HEAD
 ## Variables:
 Bash allows you to define and work with variables. Variables can store data of various type such as numbers, strings, and arrays. You can assign values to variables using the operator, and access their values using the variable name proceeded to a $ sign.
 
 ## Bash Shell Location 
+=======
+1. Variables: Bash allows you to define and work with variables. Variables can store data of various type such as numbers, strings, and arrays. You can assign values to variables using the operator, and access their values using the variable name proceeded to a $ sign.
+
+Bash Shell Location 
+>>>>>>> 150590487bb69e2a521a60c945389ed8183121a3
 
 ```javascript
 which bash
 ```
 
+<<<<<<< HEAD
+=======
+#! /usr/bin/bash
+>>>>>>> 150590487bb69e2a521a60c945389ed8183121a3
 ![Bash Location](images/Bash_location.JPG)
 
 ## EG. Assigning a value to a variable
@@ -29,6 +39,7 @@ echo $name
 ![retrieve_value](images/retrieve.JPG)
 2. Control Flow: Bash provides control flow statements like if-else, for loops, while loops, and case statement to control the flow of execution in your scripts. These statements allow you to make decisions, iterate over list, and execute different commands based on condition.
 
+<<<<<<< HEAD
 
 ## Example script to check if a number is positive, negative, or zero
 
@@ -325,3 +336,7 @@ cp -r "$source_dir"/* "$backup_dir_with_timestamp"
 # Display a message indicating the backup process is complete
 echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
 ```
+=======
+#!/bin/bash
+
+>>>>>>> 150590487bb69e2a521a60c945389ed8183121a3
