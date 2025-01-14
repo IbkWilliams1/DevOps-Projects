@@ -113,7 +113,7 @@ The ``docker stats`` command keeps updating the metrics in real-time. To stop mo
 
 #### Task 3: Deploy Task 2 using a Docker Compose file
 ##### Steps:
-1. Create a docker-compose.yml file:
+1. Create a docker-comp-lim-rsc.yml file:
 ```YAML
 services:
   nginx:
@@ -132,15 +132,16 @@ docker-compose -f docker-comp-lim-rsc.yml up -d
 before running docker-compose, verify that it's installed
 with the following command:
 ```bash
-sudo apt  install docker-compose -y
+sudo apt update
+sudo apt install docker-compose-plugin
 ```
 3. Verify the container is running:
 ```bash
-docker ps
+docker compose -f docker-comp-lim-rsc.yml ps
 ```
 The output of docker-compose should look like:
-![alt text](<images/verified docker-composed-cont.png>)
 
+![alt text](<images/verified docker-composed-cont.png>)
 ---
 
 #### Task 4: Deploy two containers on Docker Compose using the same image and network bridge.
@@ -187,7 +188,7 @@ docker-composed -p "" -f docker-compose-same-image-network.yml up -d
 OR you start organize the docker-compose file with the network just like the above.
 3. Verify the containers & network:
 ```bash
-docker ps -a
+docker compose -f docker-compose-same-image-network.yml ps
 ```
 and run the following command
 
