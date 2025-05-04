@@ -1,6 +1,6 @@
 ---
 
-Ansible Automation: Dockerized Services \& NGINX on AWS Ubuntu
+Ansible Automation: Dockerized Services & NGINX on AWS Ubuntu
 
 Automate the installation of Docker, deployment of containers (Ubuntu, NGINX, Redis), and configuration of NGINX web servers on AWS EC2 Ubuntu instances using Ansible.
 
