@@ -1,0 +1,20 @@
+- name: Install and start NGINX
+  hosts: web
+  become: yes
+  tasks:
+    - name: Install NGINX
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Ensure NGINX is running
+      service:
+        name: nginx
+        state: started
+        enabled: true
+
+    - name: Deploy custom index page
+      copy:
+        content: "<h1>Hello from {{ inventory_hostname }}</h1>"
+        dest: /var/www/html/index.html
