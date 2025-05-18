@@ -145,7 +145,7 @@ cd ansible-docker-deploy
 3. **Run the playbook:**
 
 ```sh
-ansible-playbook -i inventory.ini deploy_containers.yml
+ansible-playbook -i inventory.ini images-install.yml
 ```
 
 
