@@ -126,8 +126,26 @@ The main playbook (`images-install.yml`) will:
 
 ## Prerequisites
 
-- **Ansible** installed on your local machine (`pip install ansible`)
-- SSH access to all target servers (with the correct private key) using my adapted script called **multi_scp_upload.sh**
+- **Ansible** installed on your local machine
+  - Update the package index and upgrade installed packages:
+
+  ```bash
+      sudo apt update
+      sudo apt upgrade -y
+  ```
+  -  Add the Ansible Repository (Optional for Latest Version)
+     For the latest Ansible version, add the official Ansible PPA:
+     
+     ```bash
+     sudo apt-add-repository --yes --update ppa:ansible/ansible
+    ```
+  - Install Ansible
+    Install Ansible using APT:
+    
+    ```bash
+    sudo apt install ansible -y
+    ```
+`- SSH access to all target servers (with the correct private key) using my adapted script called **multi_scp_upload.sh**
 - Target three servers running **Ubuntu 18.04/20.04/22.04** from aws vm
 
 ---
