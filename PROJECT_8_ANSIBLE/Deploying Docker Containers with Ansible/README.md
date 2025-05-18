@@ -10,7 +10,6 @@ This project provides an Ansible-based solution to **automatically install Docke
 - [Inventory Setup](#inventory-setup)
 - [Playbook Details](#playbook-details)
 - [Prerequisites](#prerequisites)
-- [Usage](#usage)
 - [Expected Outcome](#expected-outcome)
 - [Customization](#customization)
 - [Troubleshooting](#troubleshooting)
@@ -150,14 +149,6 @@ The main playbook (`images-install.yml`) will:
 
 ---
 
-## Usage
-
-1. **Clone this repository:**
-
-```sh
-git clone https://github.com/yourusername/ansible-docker-deploy.git
-cd ansible-docker-deploy
-```
 
 2. **Edit `inventory.ini`** with your server details.
 3. **Run the playbook:**
