@@ -141,12 +141,12 @@ The main playbook (`images-install.yml`) will:
     ```
   - Install Ansible
     Install Ansible using APT:
-    
+
     ```bash
     sudo apt install ansible -y
     ```
-`- SSH access to all target servers (with the correct private key) using my adapted script called **multi_scp_upload.sh**
-- Target three servers running **Ubuntu 18.04/20.04/22.04** from aws vm
+`- OR use my **multi_scp_upload.sh**. it will copy all the keys to various servers and install ansible and it dependencies respectively
+- Target three servers is running with ansible installed
 
 ---
 
