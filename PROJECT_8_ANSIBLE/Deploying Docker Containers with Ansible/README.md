@@ -44,7 +44,7 @@ Create an `inventory.ini` file to define your target servers and SSH connection 
 
 ## Playbook Details
 
-The main playbook (`deploy_containers.yml`) will:
+The main playbook (`images-install.yml`) will:
 
 - Install Docker and prerequisites
 - Deploy three containers:
@@ -127,8 +127,8 @@ The main playbook (`deploy_containers.yml`) will:
 ## Prerequisites
 
 - **Ansible** installed on your local machine (`pip install ansible`)
-- SSH access to all target servers (with the correct private key)
-- Target servers running **Ubuntu 18.04/20.04/22.04**
+- SSH access to all target servers (with the correct private key) using my adapted script called **multi_scp_upload.sh**
+- Target three servers running **Ubuntu 18.04/20.04/22.04** from aws vm
 
 ---
 
